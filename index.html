@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Code JavaDocs</title>
+    <style>
+        .code-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="code-box">
+        <pre>
+            <code>
+public class Kubus {
+    /**
+    * @param panjangSisi panjang sisi kubus.
+    * @return Hasil dari volume kubus.
+    */
+    public static double MenghitungVolume(double panjangSisi) {
+        return Math.pow(panjangSisi, 3);
+    }
+                
+    /**
+    * @param panjangSisi panjang sisi kubus.
+    * @return luas permukaan kubus.
+    */
+    public static double MenghitungLuasPermukaan(double panjangSisi) {
+        return 6 * Math.pow(panjangSisi, 2);
+    }
+                
+    public static void main(String[] args) {
+        double panjangSisi = 5.0;
+                
+        double volume = MenghitungVolume(panjangSisi);
+        double luasPermukaan = MenghitungLuasPermukaan(panjangSisi);
+                
+        System.out.println("Volume kubus dengan sisi " + panjangSisi + " adalah: " + volume);
+        System.out.println("Luas permukaan kubus dengan sisi " + panjangSisi + " adalah: " + luasPermukaan);
+    }
+}
+            </code>
+        </pre>
+    </div>
+</body>
+</html>
